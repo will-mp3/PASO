@@ -1,0 +1,48 @@
+PASO/
+├── backend/                          # Node.js backend API
+│   ├── index.js                      # Entry point for Express server
+│   ├── .env.example                  # Environment variable template
+│   ├── package.json                  # Node.js dependencies
+│   ├── README.md
+│   └── src/
+│       ├── routes/                   # Route definitions
+│       │   └── recommendations.js
+│       ├── controllers/              # Request handlers / business logic
+│       │   └── recommendationController.js
+│       └── utils/                    # Helper modules (e.g., logger, validation)
+│           └── logger.js
+│
+├── frontend/                         # React frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── components/               # UI components (buttons, cards, etc.)
+│   │   ├── pages/                    # Page-level views
+│   │   ├── hooks/                    # Custom React hooks (e.g., data fetchers)
+│   │   └── services/                 # API calls and backend integration
+│   ├── .env.example
+│   ├── package.json
+│   └── README.md
+│
+├── ml/                               # Python ML models & logic
+│   ├── models/                       # Specific model definitions (bandits, etc.)
+│   │   └── bandit_model.py
+│   ├── data/                         # Raw/processed data (JSON, CSV, etc.)
+│   │   ├── market_data.csv
+│   │   └── user_profiles.json
+│   ├── notebooks/                    # Jupyter notebooks for exploration
+│   │   └── exploratory.ipynb
+│   ├── trainer.py                    # Model training logic
+│   ├── predictor.py                  # Inference logic
+│   ├── utils.py                      # Helper functions (preprocessing, etc.)
+│   ├── requirements.txt              # Python dependency list
+│   └── README.md
+│
+├── infra/                            # Optional Infrastructure-as-Code
+│   └── README.md
+│
+├── scripts/                          # Dev scripts for data seeding or testing
+│   └── seed_users.py
+│
+├── .gitignore                        # Ignores for Node, Python, AWS, etc.
+├── README.md                         # Root project overview
+└── LICENSE                           # Open source license (e.g., MIT or Apache 2.0)
