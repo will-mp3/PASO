@@ -87,4 +87,5 @@ def build_portfolio(risk_bucket) -> dict:
             selectedHigh : .7,
         }
 
-    return allocation
+    return {"allocation": allocation,
+            "summary": f"{risk_bucket}"}
