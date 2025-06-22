@@ -41,9 +41,9 @@ def get_risk_bucket(threshold: int) -> str:
 def build_portfolio(risk_bucket) -> dict:
     # risk threshold 1 - 10 : .1 high, .3 med, .6 low
     if risk_bucket == "conservative":
-        selectedLow = random.sample(TICKERS["low"], k=1)
-        selectedMed = random.sample(TICKERS["medium"], k=1)
-        selectedHigh = random.sample(TICKERS["high"], k=1)
+        selectedLow = random.sample(TICKERS["low"], k=1)[0]
+        selectedMed = random.sample(TICKERS["medium"], k=1)[0]
+        selectedHigh = random.sample(TICKERS["high"], k=1)[0]
 
         allocation = {
             selectedLow : .6,
@@ -53,9 +53,9 @@ def build_portfolio(risk_bucket) -> dict:
 
     # 11 - 20 : .3 high, .5 med, .2 low
     elif risk_bucket == "balanced":
-        selectedLow = random.sample(TICKERS["low"], k=1)
-        selectedMed = random.sample(TICKERS["medium"], k=1)
-        selectedHigh = random.sample(TICKERS["high"], k=1)
+        selectedLow = random.sample(TICKERS["low"], k=1)[0]
+        selectedMed = random.sample(TICKERS["medium"], k=1)[0]
+        selectedHigh = random.sample(TICKERS["high"], k=1)[0]
 
         allocation = {
             selectedLow : .2,
@@ -65,9 +65,9 @@ def build_portfolio(risk_bucket) -> dict:
 
     # 21 - 30 : .5 high, .3 med, .2 low
     elif risk_bucket == "growth":
-        selectedLow = random.sample(TICKERS["low"], k=1)
-        selectedMed = random.sample(TICKERS["medium"], k=1)
-        selectedHigh = random.sample(TICKERS["high"], k=1)
+        selectedLow = random.sample(TICKERS["low"], k=1)[0]
+        selectedMed = random.sample(TICKERS["medium"], k=1)[0]
+        selectedHigh = random.sample(TICKERS["high"], k=1)[0]
 
         allocation = {
             selectedLow : .2,
@@ -77,9 +77,9 @@ def build_portfolio(risk_bucket) -> dict:
 
     # 30+ : .7 high, .2 med, .1 low
     else:
-        selectedLow = random.sample(TICKERS["low"], k=1)
-        selectedMed = random.sample(TICKERS["medium"], k=1)
-        selectedHigh = random.sample(TICKERS["high"], k=1)
+        selectedLow = random.sample(TICKERS["low"], k=1)[0]
+        selectedMed = random.sample(TICKERS["medium"], k=1)[0]
+        selectedHigh = random.sample(TICKERS["high"], k=1)[0]
 
         allocation = {
             selectedLow : .1,
